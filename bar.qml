@@ -7,29 +7,22 @@ import qs.conf
 import qs.modules
 import qs.components
 
+
+
+
 StyledWindow {
-        anchors.bottom: true
-        anchors.right: true
-        anchors.top: true
-
-        implicitWidth: 80
-
-        color: "transparent"
+        anchors{bottom: true;right: true;top: true}
+        margins{bottom:12;right: 12;top: 12}
+        implicitWidth: 68    
 
         Rectangle{
                 radius: 10
+                width: parent.width
+                implicitHeight: parent.height
 
-                width: parent.width - 12
-                implicitHeight: parent.height - 24
-
-                border.color: Visual.colors.barBorder
-                border.width: 4
+                border{color: Visual.colors.barBorder;width: 4}
                 
-                anchors.left: parent.left
-                anchors.verticalCenter: parent.verticalCenter
-                
-
-                
+                anchors{left: parent.left;verticalCenter: parent.verticalCenter}
                 
                 gradient: Gradient{
                         GradientStop {position: 0.0; color: Visual.colors.bar}
@@ -37,40 +30,23 @@ StyledWindow {
                         GradientStop {position: 1; color: Visual.colors.bar}
                 }
 
-
-
                 Clock{
                         id: clock
 
-                        anchors.horizontalCenter: parent.horizontalCenter
-                        anchors.top: parent.top
+                        anchors{horizontalCenter: parent.horizontalCenter;top: parent.top}
                         
-                        Separator{
-                                anchors.horizontalCenter: parent.horizontalCenter
-                                anchors.verticalCenter: parent.bottom
-                        }
+                        Separator{anchors{horizontalCenter: parent.horizontalCenter;verticalCenter: parent.bottom}}
                 }
 
                 Battery{
                         id: battery
-
-                        anchors.horizontalCenter: parent.horizontalCenter
-                        anchors.bottom: parent.bottom
-
-                        Separator{
-                                anchors.horizontalCenter: parent.horizontalCenter
-                                anchors.verticalCenter: parent.top
-                        }
+                        anchors{horizontalCenter: parent.horizontalCenter;bottom: parent.bottom}
+                        Separator{anchors{horizontalCenter: parent.horizontalCenter;top: parent.top}}
                 }
 
                 Workspaces{
                         id: workspaces
-
-                        anchors.horizontalCenter: parent.horizontalCenter
-                        anchors.verticalCenter: parent.verticalCenter
+                        anchors{horizontalCenter: parent.horizontalCenter;verticalCenter: parent.verticalCenter}
                 }
         }
 }
-
-
-

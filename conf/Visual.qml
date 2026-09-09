@@ -18,8 +18,9 @@ Singleton {
                 readonly property string highlight: '#171717'
 
                 
-                readonly property string bar: '#aacfcfe2'
-                readonly property string barDark: '#eec7c7d7'
+                readonly property string bar: '#8dcfcfe2'
+                readonly property string barOpq: '#abb0c4'
+                readonly property string barDark: '#e3e3ec'
                 readonly property string barBorder: '#262245'
         }
 
@@ -32,7 +33,7 @@ Singleton {
                 readonly property real sm: 12
                 readonly property real md: 18
                 readonly property real bg: 24
-                readonly property real hg: 38
+                readonly property real hg: 42
 
         }
 

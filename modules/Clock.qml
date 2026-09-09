@@ -8,19 +8,17 @@ import qs.conf
 Rectangle {
         implicitHeight: text.implicitHeight + 15
         implicitWidth: text.implicitWidth + 15
-
+        
         color: "transparent"
 
         Text {
                 id:text
-
-                anchors.horizontalCenter: parent.horizontalCenter
-                anchors.verticalCenter: parent.verticalCenter
-                
+                anchors{
+                        horizontalCenter: parent.horizontalCenter
+                        verticalCenter: parent.verticalCenter
+                }
                 text: Time.time
-
                 color: Visual.colors.secondaryDark
-
                 font.pointSize: Visual.size.sm
         }
 }

@@ -6,8 +6,6 @@ import qs.services
 import qs.conf
 
 Rectangle {
-
-
         implicitHeight: text.implicitHeight + 25
         implicitWidth: text.implicitWidth + 25
 
@@ -15,15 +13,9 @@ Rectangle {
 
         Text {
                 id:text
-
-                anchors.horizontalCenter: parent.horizontalCenter
-                anchors.verticalCenter: parent.verticalCenter
-                
-
+                anchors{horizontalCenter: parent.horizontalCenter;verticalCenter: parent.verticalCenter}
                 text: Charge.currentCharge + "%"
-
                 color: Visual.colors.secondaryDark
-
                 font.pointSize: Visual.size.sm
         }
 }
