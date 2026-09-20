@@ -6,9 +6,8 @@ import qs.services
 import qs.conf
 
 Rectangle {
-        implicitHeight: text.implicitHeight + 25
+        implicitHeight: text.implicitWidth + 15
         implicitWidth: text.implicitWidth + 25
-
         color: "transparent"
 
         Text {
